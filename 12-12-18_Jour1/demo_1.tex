@@ -1,0 +1,102 @@
+\documentclass[a4paper, twoside, 10pt]{article}
+\usepackage[utf8]{inputenc} % Usage des caractères spéciaux
+\usepackage{fontenc}[T1]
+\usepackage{enumerate} % Options supplémentaires pour les énumérations.
+\usepackage[francais]{babel} % respect des normes françaises (table des matières etc...)
+\usepackage{amsmath, amsfonts} % Packages mathématiques
+
+\author{Ludovic}
+\title{Une première prise en main de \LaTeX}
+\date{Un jour en décembre}
+%\setlength{\baselineskip}{2cm}
+
+\begin{document}
+\maketitle % titre
+\tableofcontents % table des matières
+
+\section{Une première partie} % Un titre de partie
+
+\subsection{Une sous partie}
+
+\subsubsection{Les énumérations}
+
+\begin{itemize}
+\item Une chose,
+\item Une autre chose,
+\item Une dernière chose.
+\end{itemize}
+
+\begin{enumerate}[i)]
+\item Une chose,
+\item Une autre chose,
+\item Une dernière chose.
+\end{enumerate}
+
+\subsection{Les paragraphes}
+
+%\noindent 
+Du texte très intéressant mais aussi super profond qui veut dire des choses sur la vie en général mais aussi sur des cas particuliers. 
+Du texte très intéressant mais aussi super profond qui veut dire des choses sur la vie en général mais aussi sur des cas particuliers.
+Du texte très intéressant mais aussi super profond qui veut dire des choses sur la vie en général mais aussi sur des cas particuliers.
+On aime les mots longs anticonstitutionellement anticonstitutionellement anticonstitutionellement anticonstitutionellement.
+Enfin bon voila.
+
+%\vspace{2cm} % espace vertical
+
+Un nouveau paragraphe. 
+
+\section{Les mathématiques avec \LaTeX}
+
+Il existe deux grands types d'environnements de maths. des maths en ligne. Exemple, la fonction $f(\alpha) \geq 5$ . 
+
+$$
+f(\alpha) = \underbrace{
+			   \sum_{i = 0}^\infty \zeta_{ik}^5
+			          }_{=0}		          
+$$
+
+\begin{equation}
+\frac{3}{2} \times \frac{4}{3} = 2 \Xi \mathcal E \mathcal R \mathbb R
+\label{eq:fractions}
+\end{equation}
+
+On peut associer des labels aux équations et à tous les objets. Par exemple, on peut citer l'équation \ref{eq:fractions} qui est à la page \pageref{eq:fractions}.
+
+\subsection{Matrices et autres environnements}
+
+\begin{equation}
+M = 
+\begin{pmatrix}
+a & \frac{2}{3} \\
+\dfrac{5}{2} & 3/4 
+\end{pmatrix}
+\end{equation}
+
+$$
+a = \left(
+	\dfrac{\alpha + \dfrac{\beta}{\kappa}}{5+\upsilon}                                                               
+	\right)
+$$
+
+
+$$
+f(x) = \left\lbrace 
+       \begin{split}
+       5 , \forall x \in \mathbb R^* \\
+       12 \forall x \in \lbrace 0 \rbrace  
+       \end{split}
+       \right.
+$$
+
+\begin{eqnarray}
+a & = &  b + c \\
+  & \neq & d + z
+\end{eqnarray}
+
+\section{Commandes}
+\newcommand{\myvec}[1]{\vec{ \underline{\underline{#1}}} } % Une commande perso
+\newcommand{\myvecc}[3]{ (#1, #2, #3) } % Une commande perso
+
+Par exemple, on veut afficher des vecteurs comme $ \myvec v$ ou encore $\myvec{AB}$. Et aussi $\myvecc{1}{2}{3}$  et $\myvecc 456$
+
+\end{document}

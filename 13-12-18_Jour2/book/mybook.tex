@@ -1,0 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% UN DOCUMENT PLUS ORGANISE AVEC LA CLASSE BOOK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, twoside, onecolumn, 10pt]{book}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{packages/packages} % Mon package de styles
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONCTIONS & COMMANDES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{commands/commands}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Un beau document}
+\author{Moi}
+\date{Un 2 jour en décembre}
+
+\begin{document}
+
+\maketitle
+  % Préface
+\dominitoc % Création des mini tables des matières
+\tableofcontents
+
+\frontmatter
+\include{chapitre1/chapitre1}
+\mainmatter % Corps de document
+\include{chapitre2/chapitre2}
+\include{chapitre3/chapitre3}
+\appendix % Annexes
+\include{Annexe1/annexes1}
+\end{document}
